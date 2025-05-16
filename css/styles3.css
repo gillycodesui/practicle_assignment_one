@@ -1,0 +1,238 @@
+/* styles.css — Vibrant Feminine Portfolio Styling */
+
+/* === BASE RESET & GLOBAL STYLES === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff0f6;
+  color: #4b2342;
+  transition: background-color 0.3s, color 0.3s;
+  line-height: 1.6;
+}
+
+a {
+  color: #d63384;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #f783ac;
+}
+
+/* === DARK THEME SUPPORT === */
+.dark-theme {
+  background-color: #2a0d2e;
+  color: #fcd6f6;
+}
+
+.dark-theme a {
+  color: #f783ac;
+}
+
+.dark-theme a:hover {
+  color: #ffc0cb;
+}
+
+/* === NAVIGATION === */
+nav {
+  background-color: #ff69b4;
+  padding: 1rem;
+}
+
+.horizontal-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+}
+
+.horizontal-nav li a,
+.horizontal-nav li button {
+  color: #fff;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.horizontal-nav li a:hover,
+.horizontal-nav li button:hover {
+  background-color: #fff;
+  color: #ff69b4;
+}
+
+/* === HEADER === */
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #ffc8dd, #ffe0f0);
+  color: #4b2342;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#greeting {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+/* === MAIN CONTENT === */
+main {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #c9184a;
+}
+
+section h3 {
+  font-size: 1.3rem;
+  color: #a4133c;
+  margin-top: 1rem;
+}
+
+ul {
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+ul li {
+  margin-bottom: 0.4rem;
+}
+
+/* === FIGURE / IMAGE / PROJECT PREVIEW === */
+figure {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+figure img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+figcaption a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+/* === PROJECT DETAILS BOX === */
+#project1-details {
+  background-color: #ffe0f0;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.dark-theme #project1-details {
+  background-color: #3b0a41;
+}
+
+/* === VIDEO / EMBEDS === */
+iframe {
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+  display: block;
+  margin: 1.5rem auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* === TWO-COLUMN LAYOUT (ABOUT PAGE) === */
+.two-column {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem;
+}
+
+.two-column section {
+  flex: 1 1 55%;
+  min-width: 280px;
+}
+
+.two-column aside {
+  flex: 1 1 30%;
+  text-align: center;
+  min-width: 200px;
+}
+
+.two-column aside img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #ff69b4;
+  color: white;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+.dark-theme footer {
+  background-color: #2a0d2e;
+  color: #fcd6f6;
+}
+
+/* === BUTTONS GENERAL === */
+button {
+  font-family: inherit;
+  background: none;
+  border: none;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+  .horizontal-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .two-column {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  iframe {
+    height: 200px;
+  }
+}
